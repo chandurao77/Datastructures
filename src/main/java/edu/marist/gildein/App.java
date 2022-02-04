@@ -2,6 +2,7 @@ package edu.marist.Nandakishore;
 
 /**
  * Main app class.
+ * @author 
  */
 public final class App {
     protected App() {
@@ -17,7 +18,7 @@ public final class App {
 
         utils.processArgs(args);
 
-        System.out.println("ninja1!");
+        System.out.println("Hello world!");
 
         System.exit(returnCode);
     }
