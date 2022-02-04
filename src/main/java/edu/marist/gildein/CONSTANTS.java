@@ -1,10 +1,10 @@
-package edu.marist.gildein;
+package edu.marist.Nandakishore;
 
 /**
  * App utility class for constants.
  */
 public final class CONSTANTS {
-    private static String appName = "helloworld";
+    private static String appName = "ninja1";
     private static String version = "0.0.1";
 
     private CONSTANTS() {

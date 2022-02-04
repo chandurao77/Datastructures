@@ -1,5 +1,5 @@
-# helloworld
-Simple hello world application template
+# ninja1
+Simple hello world application
 
 ## Usage
 ```
@@ -21,7 +21,7 @@ Issue a `java -jar target/helloworld-<VERSION>-SNAPSHOT-jar-with-dependencies.ja
 ## Docker Environment
 1. Download and install Docker [https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)
 2. Build the mscs502 image by running 502 .``docker build -t mscs502 .' in a terminal
-3. Then run the container based on the mscs502 image with `docker run -it --rm -v $PWD:/helloworld mscs502` on Linux or an absolute path in Windows like `docker run -it --rm -v /c/Users/MICHAELGILDEIN/frilly-chicken-bucket:/helloworld mscs502`
+3. Then run the container based on the mscs502 image with `docker run -it --rm -v $PWD:/helloworld mscs502` on Linux or an absolute path in Windows like `docker run -it --rm -v /c/Users/Nandakishore/Documents/GitHub/ninja1:/helloworld mscs502`
 4. Use VSCode or your IDE of choice to edit your code locally.  HINT: Run `code .` from the terminal when in the folder to easily open it
 5. Build and run the code as you would locally from the Docker container bash prompt
 
