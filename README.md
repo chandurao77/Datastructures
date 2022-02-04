@@ -39,3 +39,8 @@ To skip tests, add `-Dmaven.test.skip=true` as an argument to your Maven command
 - All code must be formatted properly and verified with *clang-format*.  HINT: Use `mvn verify`
 - Binary files and other metadata shall not be committed. HINT: Update the .gitignore, if necessary
 - No warnings or errors shall be produced by Maven with `mvn verify test site compile` options.
+
+
+## about the author
+ I'm marru chandu , This is my 1st semester in Masters program majored in computer science.i'm excited about the masters program and looking forward for some great learning experience with you all in this semester.I would like to learn more programming knowledge and data structure is very good language to learn more technologies in future.
+ marru chandu chandu.marru1@marist.edu
