@@ -2,6 +2,7 @@ package edu.marist.Nandakishore;
 
 /**
  * App utility class for constants.
+ * @author marru chandu-chandu.marru1@marist.edu
  */
 public final class CONSTANTS {
     private static String appName = "ninja1";

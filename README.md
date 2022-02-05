@@ -3,7 +3,7 @@ Simple hello world application
 
 ## Usage
 ```
-~/helloworld$ java -jar target/helloworld-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h
+~/ninja1$ java -jar target/helloworld-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h
 helloworld
 Version: 0.0.1
 usage: helloworld
