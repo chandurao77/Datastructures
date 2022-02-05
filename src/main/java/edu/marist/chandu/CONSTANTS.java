@@ -1,4 +1,4 @@
-package edu.marist.Nandakishore;
+package edu.marist.chandu;
 
 /**
  * App utility class for constants.
@@ -6,7 +6,7 @@ package edu.marist.Nandakishore;
  */
 public final class CONSTANTS {
     private static String appName = "ninja1";
-    private static String version = "0.0.1";
+    private static String version = "0.5.0";
 
     private CONSTANTS() {
     }

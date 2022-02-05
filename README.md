@@ -5,7 +5,7 @@ Simple hello world application
 ```
 ~/ninja1$ java -jar target/helloworld-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h
 helloworld
-Version: 0.0.1
+Version: 0.5.0
 usage: helloworld
  -h   Display this help text
  -v   Verbose mode

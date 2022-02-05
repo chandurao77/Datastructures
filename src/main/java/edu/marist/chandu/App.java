@@ -1,5 +1,7 @@
-package edu.marist.Nandakishore;
+package edu.marist.chandu;
+
 import org.apache.commons.cli.CommandLine;
+
 /**
  * Main app class.
  * @author marru chandu-chandu.marru1@marist.edu

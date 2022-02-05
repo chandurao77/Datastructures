@@ -1,6 +1,8 @@
-package edu.marist.Nandakishore;
+package edu.marist.chandu;
 
 import org.junit.jupiter.api.Test;
+
+import edu.marist.chandu.CONSTANTS;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
