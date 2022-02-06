@@ -1,11 +1,11 @@
-# helloworld
-Simple hello world application template
+# ninja1
+Simple hello world application
 
 ## Usage
 ```
-~/helloworld$ java -jar target/helloworld-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h
+~/ninja1$ java -jar target/helloworld-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h
 helloworld
-Version: 0.0.1
+Version: 0.5.0
 usage: helloworld
  -h   Display this help text
  -v   Verbose mode
@@ -20,8 +20,8 @@ Issue a `java -jar target/helloworld-<VERSION>-SNAPSHOT-jar-with-dependencies.ja
 
 ## Docker Environment
 1. Download and install Docker [https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)
-2. Build the mscs502 image by running `docker build -t mscs502 .` in a terminal
-3. Then run the container based on the mscs502 image with `docker run -it --rm -v $PWD:/helloworld mscs502` on Linux or an absolute path in Windows like `docker run -it --rm -v /c/Users/MICHAELGILDEIN/frilly-chicken-bucket:/helloworld mscs502`
+2. Build the mscs502 image by running 502 .``docker build -t mscs502 .' in a terminal
+3. Then run the container based on the mscs502 image with `docker run -it --rm -v $PWD:/helloworld mscs502` on Linux or an absolute path in Windows like `docker run -it --rm -v /c/Users/Nandakishore/Documents/GitHub/ninja1:/helloworld mscs502`
 4. Use VSCode or your IDE of choice to edit your code locally.  HINT: Run `code .` from the terminal when in the folder to easily open it
 5. Build and run the code as you would locally from the Docker container bash prompt
 
@@ -39,3 +39,8 @@ To skip tests, add `-Dmaven.test.skip=true` as an argument to your Maven command
 - All code must be formatted properly and verified with *clang-format*.  HINT: Use `mvn verify`
 - Binary files and other metadata shall not be committed. HINT: Update the .gitignore, if necessary
 - No warnings or errors shall be produced by Maven with `mvn verify test site compile` options.
+
+
+## about the author
+ I'm marru chandu , This is my 1st semester in Masters program majored in computer science.i'm excited about the masters program and looking forward for some great learning experience with you all in this semester.I would like to learn more programming knowledge and data structure is very good language to learn more technologies in future.
+ marru chandu chandu.marru1@marist.edu

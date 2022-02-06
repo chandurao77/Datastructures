@@ -1,7 +1,7 @@
 FROM maven:latest
 
 
-WORKDIR /helloworld
+WORKDIR /ninja1
 COPY * ./
 
 RUN mvn clean install

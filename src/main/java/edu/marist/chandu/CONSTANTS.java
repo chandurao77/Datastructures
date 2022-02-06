@@ -1,11 +1,12 @@
-package edu.marist.gildein;
+package edu.marist.chandu;
 
 /**
  * App utility class for constants.
+ * @author marru chandu-chandu.marru1@marist.edu
  */
 public final class CONSTANTS {
-    private static String appName = "helloworld";
-    private static String version = "0.0.1";
+    private static String appName = "ninja1";
+    private static String version = "0.5.0";
 
     private CONSTANTS() {
     }

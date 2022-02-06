@@ -1,7 +1,11 @@
-package edu.marist.gildein;
+package edu.marist.chandu;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import edu.marist.chandu.App;
+import edu.marist.chandu.CONSTANTS;
+import edu.marist.chandu.Utils;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

@@ -1,5 +1,7 @@
-package edu.marist.gildein;
+package edu.marist.chandu;
 
+import java.io.*;
+import java.util.*;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.HelpFormatter;
@@ -9,6 +11,7 @@ import org.apache.commons.cli.PosixParser;
 
 /**
  * General utilty and helper methods.
+ * @author marru chandu-chandu.marru1@marist.edu
  */
 public class Utils {
     /**
@@ -79,5 +82,26 @@ public class Utils {
     public void error(String msg) {
         System.err.println(msg);
         System.exit(-1);
+    }
+
+    /**
+     * Open file and read in file content string.
+     * @param filename Name of file to be read
+     * @return String of file content if found
+     */
+    public String readFile(String filename) {
+        StringBuilder sb = new StringBuilder();
+        Scanner fileScanner;
+        try {
+            fileScanner = new Scanner(new File(filename));
+            while (fileScanner.hasNextLine()) {
+                sb.append(fileScanner.nextLine());
+                sb.append("\n");
+            }
+            fileScanner.close();
+        } catch (FileNotFoundException e) {
+            error("Error: File " + filename + " not found.");
+        }
+        return sb.toString();
     }
 }
