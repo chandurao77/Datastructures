@@ -6,7 +6,7 @@ package edu.marist.chandu;
  */
 public final class CONSTANTS {
     private static String appName = "ninja1";
-    private static String version = "0.5.0";
+    private static String version = "1.0.0";
 
     private CONSTANTS() {
     }

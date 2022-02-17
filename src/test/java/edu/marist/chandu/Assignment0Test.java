@@ -129,7 +129,7 @@ class Assignment0Test {
      */
     @Test
     void testAppVersion() {
-        assertEquals(CONSTANTS.getVersion(), "0.5.0");
+        assertEquals(CONSTANTS.getVersion(), "1.0.0");
     }
 
     /**
