@@ -1,12 +1,14 @@
 package edu.marist.chandu;
 
-public class Node {
-	public Integer data;
-	public Node next;
-	
-	//Constructor
-	public Node(Integer data) {
-		this.data = data;
-		next =  null;
-	}
-}
+  // static inner class
+  public class Node {
+    int value;
+
+    // connect each node to next node
+    Node next;
+
+    Node(int d) {
+      value = d;
+      next = null;
+    }
+  }
