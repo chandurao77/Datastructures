@@ -1,19 +1,28 @@
 package edu.marist.chandu;
 
+/**
+ *
+ */
+
 class HashTable {
     private int collisionCount;
-    private int P;
-    private int M;
-    private LinkedList<String>[] hashTable;
+    private int e;
+    private int d;
+    private LinkedList[] hashTable;
+    /**
+     *
+     *  */
 
-    public HashTable() {
+    public HashTable(int x, int v) {
         this.collisionCount = 0;
-        this.P = 13;
-        this.M = 101;
-        this.hashTable = new LinkedList[this.M];
+        this.e = x;
+        x = 13;
+        this.d = v;
+        v = 101;
+        this.hashTable = new LinkedList[this.d];
 
-        for (int i = 0; i < this.M; i++) {
-            this.hashTable[i] = new LinkedList<String>();
+        for (int i = 0; i < this.d; i++) {
+            this.hashTable[i] = new LinkedList();
         }
 
     }
@@ -23,14 +32,14 @@ class HashTable {
     }
 
     public int getP() {
-        return this.P;
+        return this.e;
     }
 
     public int getM() {
-        return this.M;
+        return this.d;
     }
 
-    public LinkedList<String>[] getHashTable() {
+    public LinkedList[] getHashTable() {
         return this.hashTable;
     }
 
@@ -38,33 +47,46 @@ class HashTable {
         this.collisionCount = collisionCount;
     }
 
-    public void setP(int P) {
-        this.P = P;
+    public void setP(int b) {
+        this.e = b;
     }
 
-    public void setM(int M) {
-        this.M = M;
+    public void setM(int c) {
+        this.d = c;
     }
 
-    public void setHashTable(LinkedList<String>[] hashTable) {
+    public void setHashTable(LinkedList[] hashTable) {
         this.hashTable = hashTable;
     }
-   
-    
+    /**
+     *
+     */
+
     public void clear() {
-        // 
+        //
         for (int i = 0; i < this.M; i++) {
             this.hashTable[i].clear();
         }
     }
+    /**
+     *
+     * @param key
+     * @return
+     */
 
     public int hash(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
-            hash = (hash * this.P + key.charAt(i)) % this.M;
+            hash = (hash * this.e + key.charAt(i)) % this.d;
         }
         return hash;
     }
+    /**
+     *
+     * @param key
+     * @param value
+     * @return
+     */
 
     public int insert(String key, String value) {
         // if the hash table is full, return -1
@@ -74,7 +96,7 @@ class HashTable {
             this.hashTable[hash].add(key);
             this.hashTable[hash].add(value);
             return 0;
-            // if the key does not exist, return 0
+        // if the key does not exist, return 0
         } else {
             this.collisionCount++;
             // System.out.println("Collision: " + key);
@@ -82,6 +104,11 @@ class HashTable {
         }
 
     }
+    /**
+     *
+     * @param key
+     * @return
+     */
 
     public int remove(String key) {
         // if the key is not found, return -1
@@ -94,7 +121,11 @@ class HashTable {
             return 0;
         }
     }
-
+    /**
+     *
+     * @param key
+     * @return
+     */
 
     public String read(String key) {
         int hash = this.hash(key);
@@ -105,8 +136,16 @@ class HashTable {
             // if the key is found, return the value
             return this.hashTable[hash].get(key);
         }
+        /**
+        *
+        *
+        * */
 
     }
+    /**
+     *
+     *
+     * */
 
     public boolean search(String value) {
         // if the value is not found, return false
@@ -117,12 +156,17 @@ class HashTable {
         }
         return false;
     }
+    /**
+     *  */
 
     public void printHashTable() {
         for (int i = 0; i < this.M; i++) {
             System.out.println(this.hashTable[i].toString());
         }
     }
+    /**
+     *
+     */
 
     public String toString() {
         String str = "";
@@ -133,7 +177,3 @@ class HashTable {
     }
 
 }
-
-
-
-  
