@@ -1,103 +1,62 @@
 package edu.marist.chandu;
 
-// class Queue
-// {
-//     int arr[], front, rear, cap, n1;
+/**
+ * This class is Queue Implementation.
+ */
+public class Queue {
+    private final LinkedList linkedlist = new LinkedList();
 
-//     // Queue constructor
-// Queue(int n)
-// {
-// 		arr = new int[n];
-// 		cap = n;
-// 		front = 0;
-// 		rear = -1;
-// 		n = 0;
-// 	}
+    /**
+     * Below method is to dequeue.
+     * @return
+     */
+    public String deqeueue() {
+        return linkedlist.remove(0).getData();
+    }
 
-// 	// dequeue function for removing the front element
-// 	public void dequeue()
-// 	{
-// 		// check for queue underflow
-// 		if (isEmpty())
-// 		{
-// 			System.out.println("No items in the queue,cannot delete");
-// 			System.exit(1);
-// 		}
+    /**
+     * Below method is to search data.
+     * @param data
+     * @return
+     */
+    public Node search(String data) {
+        int index = linkedlist.search(data);
+        if (index == -1) {
+            return null;
+        }
+        Node node = linkedlist.readNode(index);
+        return node;
+    }
 
-// 		System.out.println("Deleting " + arr[front]);
+    /**
+     * Below method is to read peek element.
+     * @return
+     */
+    public String peek() {
+        return linkedlist.readNode(0).getData();
+    }
 
-// 		front = (front + 1) % cap;
-// 		n1--;
-// 	}
+    /**
+     * Below method is to check empty.
+     * @return
+     */
+    public boolean isEmpty() {
+        return linkedlist.getSize() == 0;
+    }
 
-// 	// enqueue function for adding an item to the rear
-//     public void enqueue(int val)
-// 	{
-// 		// check for queue overflow
-// 		if (isFull())
-// 		{
-// 			System.out.println("OverFlow!!Cannot add more values");
-// 			System.exit(1);
-// 		}
+    /**
+     * Below method is to enqueue.
+     * @param data
+     */
+    public void enqueue(String data) {
+        Node node = new Node(data);
+        linkedlist.insert(linkedlist.getSize(), node);
+    }
 
-// 		System.out.println("Adding " + val);
-
-// 		rear = (rear + 1) % cap;
-// 		arr[rear] = val;
-// 		n1++;
-// 	}
-
-// 	// peek function to return front element of the queue
-// 	public int peek()
-// 	{
-// 		if (isEmpty())
-// 		{
-// 			System.out.println("Queue empty!!Cannot delete");
-// 			System.exit(1);
-// 		}
-// 		return arr[front];
-// 	}
-
-// 	// returns the size of the queue
-// 	public int size()
-// 	{
-// 		return n1;
-// 	}
-
-// 	// to check if the queue is empty or not
-// 	public Boolean isEmpty()
-// 	{
-// 		return (size() == 0);
-// 	}
-
-// 	// to check if the queue is full or not
-// 	public Boolean isFull()
-// 	{
-// 		return (size() == cap);
-// 	}
-
-// 	// Queue implementation in java
-// 	public static void main (String[] args)
-// 	{
-// 		// create a queue of capacity 5
-// 		Queue q = new Queue(5);
-
-// 		q.enqueue(10);
-// 		q.enqueue(20);
-// 		q.enqueue(30);
-
-// 		System.out.println("Front element is: " + q.peek());
-// 		q.dequeue();
-// 		System.out.println("Front element is: " + q.peek());
-
-// 		System.out.println("Queue size is " + q.size());
-
-// 		q.dequeue();
-// 		q.dequeue();
-
-// 		if (q.isEmpty())
-// 			System.out.println("Queue Is Empty");
-// 		else
-// 			System.out.println("Queue Is Not Empty");
-// 	}
-// }
+    /**
+     * Below method is to print queue.
+     */
+    public void printQueue() {
+        linkedlist.printList();
+    }
+}

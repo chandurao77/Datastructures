@@ -39,11 +39,49 @@ public final class App {
             if (cmdLine.hasOption("v")) {
                 System.out.println("File to be used: " + cmdArgs[0]);
             }
-            System.out.println(everyOtherLine(utils.readFile(cmdArgs[0])));
+            String fileContent = utils.readFile(cmdArgs[0]);
+            System.out.println(everyOtherLine(fileContent));
+            sameCharacterLines(fileContent);
+            HashTable hashTable = new HashTable();
+            hashTable.printHashTable();
+            String[] array = fileContent.split("\n");
+            for (int key = 0; key < array.length; key = key + 1) {
+                hashTable.insert(array[key].trim(), array[key].trim());
+            }
+            System.out.println(hashTable.printHashTable());
         } else {
             utils.error("Error: Incorrect number arguments. One FILE argument required.");
         }
 
         System.exit(returnCode);
+    }
+
+    /**
+     * Below method is to output the lines having same character endings.
+     * @param str
+     */
+    public static void sameCharacterLines(String str) {
+        String[] inStringLineArray = str.split("\n");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < inStringLineArray.length; i = i + 1) {
+            if (check(inStringLineArray[i].trim())) {
+                System.out.println(inStringLineArray[i]);
+            }
+        }
+    }
+
+    /**
+     * Below method is to check the string endings using enqueue and dequeue.
+     * @param line
+     * @return
+     */
+    public static  boolean check(String line) {
+        Stack stack = new Stack();
+        Queue queue = new Queue();
+        for (int i = 0; i < line.length(); i++) {
+            stack.push(String.valueOf(line.charAt(i)));
+            queue.enqueue(String.valueOf(line.charAt(i)));
+        }
+        return stack.pop().equalsIgnoreCase(queue.deqeueue());
     }
 }

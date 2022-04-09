@@ -1,32 +1,90 @@
 package edu.marist.chandu;
 
-//   // static inner class
-//   public class Node {
-//     int value;
+/**
+ * This class is Node class with string data.
+ */
+public class Node {
 
-//     // connect each node to next node
-//     Node next;
+    private String key;
+    private String data;
+    private Node prev;
+    private Node next;
 
-//     Node(int d) {
-//       value = d;
-//       next = null;
-//     }
+    /**
+     * Node class default constructor.
+     */
+    Node() {
+    }
 
-//     public Node getLeft( String key) {
-//         return null;
-//     }
+    /**
+     * Node class constructor overloading with string.
+     * @param data
+     */
+    Node(String data) {
+        this.data = data;
+    }
 
-//     public Integer getValue() {
-//         return null;
-//     }
+    public Node(String key, String value) {
+        this.key = key;
+        this.data = value;
+    }
 
-//     public Node getRight() {
-//         return null;
-//     }
+    /**
+     * method to get data.
+     * @return
+     */
+    public String getData() {
+        return data;
+    }
 
-//     public void setLeft(Node newNode) {
-//     }
+    /**
+     * Method to set data.
+     * @param data
+     */
+    public void setData(String data) {
+        this.data = data;
+    }
 
-//     public void setRight(Node newNode) {
-//     }
-//   }
+    /**
+     * Method to get previous element.
+     * @return
+     */
+    public Node getPrev() {
+        return prev;
+    }
+
+    /**
+     * Method to set previous element.
+     * @param prev
+     */
+    public void setPrev(Node prev) {
+        this.prev = prev;
+    }
+
+    /**
+     * Method to get next element.
+     * @return
+     */
+    public Node getNext() {
+        return next;
+    }
+
+    /**
+     * Method to set next element.
+     * @param next
+     */
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    /**
+     * method to return content as string.
+     * @return
+     */
+    @Override
+    public String toString() {
+        return "Node{"
+            + "data='" + data + '\''
+            + '}';
+    }
+}

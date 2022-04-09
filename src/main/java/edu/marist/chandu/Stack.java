@@ -1,85 +1,47 @@
 package edu.marist.chandu;
 
-// class Stack {
+/**
+ * Below class is the implementation of Stack Datastructure.
+ */
+public class Stack {
 
-//     // variable to store elements of stack
-//     private int arr[];
+    private final LinkedList linkedlist = new LinkedList();
 
-//     private int head;
+    /**
+     * Below method is to pop element.
+     * @return
+     */
+    public String pop() {
+        return linkedlist.remove(0).getData();
+    }
 
-//     private int memory;
+    /**
+     * Below method is to search data.
+     * @param data
+     * @return
+     */
+    public Node search(String data) {
+        int index = linkedlist.search(data);
+        if (index == -1) {
+            return null;
+        }
+        Node node = linkedlist.readNode(index);
+        return node;
+    }
 
-//     // Creating a stack
-//     Stack(int size) {
-//       // initializing the stack variables
-//       arr = new int[size];
-//       memory = size;
-//       head = -1;
-//     }
+    /**
+     * Below method is to push element.
+     * @param data
+     */
+    public void push(String data) {
+        Node node = new Node(data);
+        linkedlist.insert(0, node);
+    }
 
-//     // push elements to the head of stack
-//     public void push(int x) {
-//       if (isFull()) {
-//         System.out.println("Stack OverFlow");
-
-//         // terminates the program
-//         System.exit(1);
-//       }
-
-//       // insert element on head of stack
-//       System.out.println("Inserting " + x);
-//       arr[++head] = x;
-//     }
-
-//     // pop elements from head of stack
-//     public int pop() {
-
-//       // if stack is empty there are no elements to pop
-//       if (isEmpty()) {
-//         System.out.println("The Stack is Empty");
-//         System.exit(1);
-//       }
-
-//       // pop element from top of stack
-//       return arr[head--];
-//     }
-
-//     // size of the stack
-//     public int getSize() {
-//       return head + 1;
-//     }
-
-//     // testing if array size is empty
-//     public Boolean isEmpty() {
-//       return head == -1;
-//     }
-
-//     // testing if array size is full
-//     public Boolean isFull() {
-//       return head == memory - 1;
-//     }
-
-//     // print array elements
-//     public void printStack() {
-//       for (int i = 0; i <= head; i++) {
-//         System.out.print(arr[i] + ", ");
-//       }
-//     }
-
-//     public static void main(String[] args) {
-//       Stack stack = new Stack(5);
-
-//       stack.push(40);
-//       stack.push(30);
-//       stack.push(20);
-
-//       System.out.print("Stack: ");
-//       stack.printStack();
-
-//       // pop element from stack
-//       stack.pop();
-//       System.out.println("\nAfter pop");
-//       stack.printStack();
-
-//     }
-//   }
+    /**
+     * Below method is to print stack cnotent.
+     */
+    public void printStack() {
+        linkedlist.printList();
+    }
+}
