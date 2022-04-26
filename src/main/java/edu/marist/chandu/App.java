@@ -49,6 +49,12 @@ public final class App {
                 hashTable.insert(array[key].trim(), array[key].trim());
             }
             System.out.println(hashTable.printHashTable());
+            SortingAlgorithms algorithms = new SortingAlgorithms();
+            algorithms.bubbleSort(array);
+            algorithms.insertionSort(array);
+            algorithms.mergeSort(array);
+            algorithms.heapSort(array);
+            algorithms.quickSort(array);
         } else {
             utils.error("Error: Incorrect number arguments. One FILE argument required.");
         }
