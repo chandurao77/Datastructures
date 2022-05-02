@@ -39,7 +39,14 @@ public final class App {
             if (cmdLine.hasOption("v")) {
                 System.out.println("File to be used: " + cmdArgs[0]);
             }
-            System.out.println(everyOtherLine(utils.readFile(cmdArgs[0])));
+            //System.out.println(everyOtherLine(utils.readFile(cmdArgs[0])));
+            String file = utils.readFile(cmdArgs[0]);
+            utils.arraylistmethod(file);
+            utils.hashMap(file);
+            utils.priorityQueue(file);
+            utils.stackmethod(file);
+            utils.sortedset(file);
+            utils.treemap(file);
         } else {
             utils.error("Error: Incorrect number arguments. One FILE argument required.");
         }
