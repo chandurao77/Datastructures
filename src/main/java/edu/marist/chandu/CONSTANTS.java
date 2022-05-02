@@ -6,8 +6,8 @@ package edu.marist.chandu;
  * @author marru chandu-chandu.marru1@marist.edu
  */
 public final class CONSTANTS {
-    private static final String appName = "ninja1";
-    private static final String version = "4.0.0";
+    private static String appName = "ninja1";
+    private static String version = "4.0.0";
 
     private CONSTANTS() {
     }

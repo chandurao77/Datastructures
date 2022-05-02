@@ -45,10 +45,6 @@ public final class App {
             HashTable hashTable = new HashTable();
             hashTable.printHashTable();
             String[] array = fileContent.split("\n");
-            for (int key = 0; key < array.length; key = key + 1) {
-                hashTable.insert(array[key].trim(), array[key].trim());
-            }
-            System.out.println(hashTable.printHashTable());
             SortingAlgorithms algorithms = new SortingAlgorithms();
             algorithms.bubbleSort(array);
             algorithms.insertionSort(array);

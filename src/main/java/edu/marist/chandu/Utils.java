@@ -3,7 +3,12 @@ package edu.marist.chandu;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import org.apache.commons.cli.*;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.PosixParser;
 
 /**
  * General utilty and helper methods.
